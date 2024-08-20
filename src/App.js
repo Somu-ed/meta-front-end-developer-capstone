@@ -1,39 +1,40 @@
-import {
-  Route, 
-  Routes
-} from 'react-router-dom';
-import pages from './Components/Layout/utils/pages';
-import Layout from './Components/Layout/Layout';
-import Home from './Components/Pages/Home/Home';
+import { Route, Routes } from "react-router-dom";
+import pages from "./Components/Layout/utils/pages";
+import Layout from "./Components/Layout/Layout";
+import Home from "./Components/Pages/Home/Home";
+import NotFound from "./Components/Pages/NotFound";
+import UnderConstruction from "./Components/Pages/UnderConstruction";
+import Bookings from "./Components/Pages/Booking/Booking";
+import ConfirmedBooking from "./Components/Pages/Booking/ConfirmedBooking";
 
 function App() {
   return (
     <>
       <Layout>
         <Routes>
-          <Route path={pages.get('home').path} element={<Home />} />
-          {/* <Route 
-            path={pages.get('about').path} 
-            element={<UnderConstruction />} 
+          <Route path={pages.get("home").path} element={<Home />} />
+          <Route
+            path={pages.get("about").path}
+            element={<UnderConstruction />}
           />
-          <Route 
-            path={pages.get('menu').path} 
-            element={<UnderConstruction />} 
+          <Route
+            path={pages.get("menu").path}
+            element={<UnderConstruction />}
           />
           <Route path={pages.get('bookings').path} element={<Bookings />} />
           <Route 
             path={pages.get('confirmedBooking').path} 
             element={<ConfirmedBooking />} 
           />
-          <Route 
-            path={pages.get('orderOnline').path} 
-            element={<UnderConstruction />} 
+          <Route
+            path={pages.get("orderOnline").path}
+            element={<UnderConstruction />}
           />
-          <Route 
-            path={pages.get('login').path} 
-            element={<UnderConstruction />} 
+          <Route
+            path={pages.get("login").path}
+            element={<UnderConstruction />}
           />
-          <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </>
